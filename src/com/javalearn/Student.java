@@ -6,16 +6,18 @@ public class Student {
     private String lastName;
     private String email;
     private String phone;
+    private address address;
 
     public Student() {
     }
 
-    public Student(int studentCode, String firstName, String lastName, String email, String phone) {
+    public Student(int studentCode, String firstName, String lastName, String email, String phone, com.javalearn.address address) {
         this.studentCode = studentCode;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.phone = phone;
+        this.address = address;
     }
 
     public int getStudentCode() {
@@ -58,14 +60,11 @@ public class Student {
         this.phone = phone;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "studentCode=" + studentCode +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                '}';
+    public com.javalearn.address getAddress() {
+        return address;
+    }
+
+    public void setAddress(com.javalearn.address address) {
+        this.address = address;
     }
 }
